@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AI Fresher Job Search</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>AI Fresher Job Search</h1>
+        <p class="subtitle">
+          Searches free/public job feeds and ranks best matches for entry-level roles.
+        </p>
+      </header>
+
+      <form id="searchForm" class="card">
+        <label class="field">
+          <span>Role (broad or specific)</span>
+          <input
+            id="role"
+            name="role"
+            type="text"
+            placeholder="e.g., Software Engineer, Data Analyst, Java Developer, MBA Intern"
+            required
+            autocomplete="off"
+          />
+        </label>
+
+        <div class="grid2">
+          <label class="field">
+            <span>Work mode</span>
+            <select id="workMode" name="workMode">
+              <option value="both" selected>Onsite + Remote</option>
+              <option value="remote">Remote only</option>
+              <option value="onsite">Onsite only</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Market</span>
+            <select id="market" name="market">
+              <option value="india" selected>India</option>
+              <option value="global">All world</option>
+              <option value="any">India + All world</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Fresher-only</span>
+          <div class="inline">
+            <input id="fresherOnly" name="fresherOnly" type="checkbox" checked />
+            <label for="fresherOnly" class="muted">Include only 0-1 year / fresher / trainee-style roles</label>
+          </div>
+        </label>
+
+        <label class="field">
+          <span>Optional skills / keywords (comma separated)</span>
+          <input
+            id="skills"
+            name="skills"
+            type="text"
+            placeholder="e.g., Java, React, SQL, Python, AWS"
+            autocomplete="off"
+          />
+        </label>
+
+        <button class="btn" type="submit">Search jobs</button>
+        <p id="status" class="status" aria-live="polite"></p>
+      </form>
+
+      <section id="results" class="results"></section>
+      <footer class="footer">
+        <p class="muted small">
+          Note: With free sources, coverage depends on available RSS/public feeds. Add more sources anytime by updating the backend.
+        </p>
+      </footer>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
+

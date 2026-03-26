@@ -1,0 +1,17 @@
+{
+  "name": "job-searcher-ai-netlify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"No build step (static site + Netlify Functions)\"",
+    "dev": "echo \"Deploy to Netlify to run the website + functions\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}
